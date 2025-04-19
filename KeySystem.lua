@@ -134,12 +134,13 @@ local function initKeySystem()
     
     -- Handle Get Key button
     ui.GetKeyButton.MouseButton1Click:Connect(function()
-        -- Open key website in browser
+        -- Website URL to get key
         local keyWebsite = "https://wordpress-1436552-5435044.cloudwaysapps.com/"
-        pcall(function()
-            game:GetService("GuiService"):OpenBrowserWindow(keyWebsite)
-        end)
-        ui.StatusLabel.Text = "Website opened in browser! Complete the task to get a key."
+        
+        -- Copy URL to clipboard
+        setclipboard(keyWebsite)
+        
+        ui.StatusLabel.Text = "Key website URL copied to clipboard! Paste in your browser."
         ui.StatusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
     end)
     
