@@ -95,7 +95,7 @@ end
 -- Verify key with server
 local function verifyKey(key)
     -- Replace with your website URL
-    local url = "https://wordpress-1436552-5435044.cloudwaysapps.com/?verify=1&key=" .. key
+    local url = "https://luarmor.org/?verify=1&key=" .. key
     
     local success, response = pcall(function()
         return game:HttpGet(url)
@@ -135,7 +135,7 @@ local function initKeySystem()
     -- Handle Get Key button
     ui.GetKeyButton.MouseButton1Click:Connect(function()
         -- Website URL to get key
-        local keyWebsite = "https://wordpress-1436552-5435044.cloudwaysapps.com/"
+        local keyWebsite = "https://luarmor.org/"
         
         -- Copy URL to clipboard
         setclipboard(keyWebsite)
